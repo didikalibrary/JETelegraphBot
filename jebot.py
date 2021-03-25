@@ -17,11 +17,11 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm Telegraph Bot
+               text="""<b>Hello Hmelthate, keihi Telegraph Bot ka nia
 
-I can upload photos or videos to telegraph. Made by @Didiktea 🇱🇰
+Kei hian video emaw photos emaw telegraph ah ka upload thei. Siam tu @Didiktea 🇱🇰
 
-Hit help button to find out more about how to use me</b>""",   
+Help button khu hmet la min hman dantur i hre thei ang</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -30,7 +30,7 @@ Hit help button to find out more about how to use me</b>""",
                                             "Channel", url="https://t.me/androidusersmizo")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/lalbiakdika/JETelegraphBot")
+                                            "Support Group", url="https://t.me/puituflynn")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -43,7 +43,7 @@ async def help(client, message):
                chat_id=message.chat.id,
                text="""<b>Telegraph Bot Help!
 
-Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
+Thlalak emaw video emaw 5mb aia lianlo lo thawn la, Telegraph ah kalo upload ang.
 
 ~ @Didiktea</b>""",
         reply_markup=InlineKeyboardMarkup(
@@ -54,7 +54,7 @@ Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
                                             "About", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/lalbiakdika/JETelegraphBot")
+                                            "Support Group", url="https://t.me/puituflynn")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -69,9 +69,9 @@ async def about(client, message):
 
 <b>♞ Developer:</b> <a href="https://t.me/Didiktea">Didiktea 🇱🇰</a>
 
-<b>♞ Support:</b> <a href="https://t.me/puituflynn">Didiktea BOTs Support</a>
+<b>♞ Support:</b> <a href="https://t.me/puituflynn">Mizo Android Users</a>
 
-<b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
+<b>♞ Youtube:</b> <a href="https://m.youtube.com/channel/UCRVFdrBy_I-_hNL3vgONbuQ">Youtube Channel</a>
 
 <b>~ @Didiktea</b>""",
      reply_markup=InlineKeyboardMarkup(
@@ -79,7 +79,7 @@ async def about(client, message):
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/lalbiakdika/JETelegraphBot")
+                                            "Support Group", url="https://t.me/puituflynn")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -119,7 +119,7 @@ async def telegraphvid(client, message):
 
 @Jebot.on_message(filters.animation)
 async def telegraphgif(client, message):
-    msg = await message.reply_text("Uploading To Telegraph...")
+    msg = await message.reply_text("Upload mek lo nghak lawks...")
     download_location = await client.download_media(
         message=message, file_name='root/jetg')
     try:
